@@ -43,6 +43,12 @@ body{
 body{
     margin: 0;
 }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container{
     width: 335px;
     display: flex;
@@ -74,9 +80,7 @@ body{
 }
 
 .results-circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     width: 150px;
     height: 150px;
     background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
@@ -161,6 +165,12 @@ body{
     color: hsl(224, 30%, 27%);
 }
 
+.border-position{
+    position: absolute; 
+    width: 300px;
+    height: 52px;
+}
+
 #reaction{
     background: hsla(0, 100%, 67%, 0.05);
 }
@@ -169,10 +179,10 @@ body{
     color: #ff7777;
 }
 
+
+
 #summary-reaction-border{
-    position: absolute; 
-    width: 300px;
-    height: 52px;
+
     background:
       linear-gradient(to right, hsla(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
       linear-gradient(to right, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
@@ -182,7 +192,7 @@ body{
       linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
       linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
       linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%;
-  
+    
     background-repeat: no-repeat;
     background-size: 10px 10px;
     border-radius: 5px;
@@ -195,9 +205,7 @@ body{
     color: hsl(39, 100%, 56%);
 }
 #summary-memory-border{
-  position: absolute; 
-  width: 300px;
-  height: 52px;
+
   background:
     linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
     linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
@@ -222,9 +230,7 @@ body{
 }
 
 #summary-verbal-border{
-  position: absolute; 
-  width: 300px;
-  height: 52px;
+
   background:
     linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
     linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
@@ -249,9 +255,7 @@ body{
 }
 
 #summary-visual-border{
-    position: absolute; 
-    width: 300px;
-    height: 52px;
+
     background:
       linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
       linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
@@ -286,35 +290,35 @@ body{
 
 @media only screen and (min-width: 768px){
 
-.container{
-    width: 700px;
-    height: 450px;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+    .container{
+        width: 700px;
+        height: 450px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
-.results{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 250px;
-    height: 375px;
-    border-radius: 30px;
-}
+    .results{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 250px;
+        height: 375px;
+        border-radius: 30px;
+    }
 
 
-.results-overall{
-    width: 250px;
-}
+    .results-overall{
+        width: 250px;
+    }
 
-.Summary{
-    border-radius: 30px;
-    box-shadow: 3px 3px 5px hsl(221, 100%, 96%);
-    padding: 30px;
-}
+    .Summary{
+        border-radius: 30px;
+        box-shadow: 3px 3px 5px hsl(221, 100%, 96%);
+        padding: 30px;
+    }
 
-footer {
-    margin: 10px;
-}
+    footer {
+        margin: 10px;
+    }
 }
