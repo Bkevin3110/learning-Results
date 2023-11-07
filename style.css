@@ -1,26 +1,26 @@
 @font-face{
-    font-family: HankenGrotesk;
+    font-family: 'HankenGrotesk';
     font-style: normal;
     font-weight: 700;
-    src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('ttf');
+    src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
 }
 
 @font-face{
-    font-family: HankenGrotesk;
+    font-family: 'HankenGrotesk';
     font-style: normal;
     font-weight: 800;
-    src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('ttf');
+    src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
 }
 @font-face{
-    font-family: HankenGrotesk;
+    font-family: 'HankenGrotesk';
     font-style: normal;
     font-weight: 500;
-    src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('ttf');
+    src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
 }
 
 @font-face{
-    font-family: HankenGroteskVF;
-    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('ttf');
+    font-family: 'HankenGroteskVF';
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 1000;
     font-stretch: 75% 200%;
     font-variation-settings: 'wdth' 100, 'wght' 400;
@@ -44,11 +44,12 @@ body{
     margin: 0;
 }
 .container{
-    width: 375px;
+    width: 335px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: auto;
 }
 
 .results{
@@ -61,29 +62,55 @@ body{
 
 }
 
+.results-your{
+    margin: 0 0 15px 0;
+    color: hsl(0, 0%, 100%, .5);
+    font-size: 18px;
+}
 
 .results p {
     color: hsl(241, 100%, 89%)   ;
     margin: 0;
 }
+
 .results-circle{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 150px;
-    background: linear-gradient(hsla(256, 72%, 46%, 1),hsl(241, 81%, 54%));
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     border-radius: 50%;
     margin: 10px auto;
 }
 
-.results-circle-score h1{
-    font-size: 50px;
+
+
+.results-score{
+    font-size: 60px;
+    font-weight: 800;
+    font-variation-settings: "wght" 800;
     margin: 0;
+    
 }
+.results-total-score {
+    color: hsl(241, 100%, 89%, .5);
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
+}
+
 .results-overall{
     width: 280px;
     margin: 0 auto;
+}
+
+
+.results-rating{
+    margin: 10px 0;
+}
+
+.results-overall p {
+    margin: 10px 0;
 }
 .Summary{
     width: 300px;
@@ -92,26 +119,7 @@ body{
   position: relative;
   border-radius: 5px;
   max-width: 300px;
-}
-.summary-content-title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100px;
-}
-.corner {
-    position: absolute;
-}
-
-
-#reaction{
-    background: hsla(0, 100%, 67%, 0.25);
-}
-
-#reaction .corner {
-    background: none;
-    height: 10px;
-    width: 10px;
+  margin: 15px 0;
 }
 
 .summary-content {
@@ -119,39 +127,17 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-#top-left {
-  top: 0;
-  left: 0;
-  border-radius: 5px 0 0 0;
-  border-top: 2px solid #ff7777;
-  border-left: 2px solid #ff7777;
 }
 
-#top-right {
-  top: 0;
-  right: 0;
-  border-radius: 0 5px 0 0;
-  border-top: 2px solid #ff7777;
-  border-right: 2px solid #ff7777;
+.summary-content-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    
 }
 
-#bottom-right {
-  bottom: 0;
-  right: 0;
-  border-radius: 0 0 5px 0;
-  border-bottom: 2px solid #ff7777;
-  border-right: 2px solid #ff7777;
-}
 
-#bottom-left {
-  bottom: 0;
-  left: 0;
-  border-radius: 0 0 0 5px;
-  border-bottom: 2px solid #ff7777;
-  border-left: 2px solid #ff7777;
-}
 
 .summary-icon {
   height: 24;
@@ -162,33 +148,173 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
+
+.score {
+    color: hsl(224, 30%, 27%, .55);
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
+}
+
+.summary-score{
+    font-weight: 600;
+    font-variation-settings: "wght" 800;
+    color: hsl(224, 30%, 27%);
+}
+
+#reaction{
+    background: hsla(0, 100%, 67%, 0.05);
+}
+
 #reaction .title {
     color: #ff7777;
 }
 
-.score {
-    color: #444444;
-}
+#summary-reaction-border{
+    position: absolute; 
+    width: 300px;
+    height: 52px;
+    background:
+      linear-gradient(to right, hsla(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
+      linear-gradient(to right, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
+      linear-gradient(to left, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
+      linear-gradient(to left, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%,
+      linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
+      linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
+      linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
+      linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%;
+  
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    border-radius: 5px;
+  }
 
 #memory{
-    background: hsla(39, 100%, 56%, 0.25);
+    background: hsla(39, 100%, 56%, 0.05);
 }
-.memborder{
+#memory .title {
+    color: hsl(39, 100%, 56%);
+}
+#summary-memory-border{
   position: absolute; 
   width: 300px;
   height: 52px;
   background:
-    linear-gradient(to right, hsl(39, 100%, 56%) 2px, transparent 2px) 0 0,
-    linear-gradient(to right, hsl(39, 100%, 56%) 2px, transparent 2px) 0 100%,
-    linear-gradient(to left, hsl(39, 100%, 56%) 2px, transparent 2px) 100% 0,
-    linear-gradient(to left, hsl(39, 100%, 56%) 2px, transparent 2px) 100% 100%,
-    linear-gradient(to bottom, hsl(39, 100%, 56%) 2px, transparent 2px) 0 0,
-    linear-gradient(to bottom, hsl(39, 100%, 56%) 2px, transparent 2px) 100% 0,
-    linear-gradient(to top, hsl(39, 100%, 56%) 2px, transparent 2px) 0 100%,
-    linear-gradient(to top, hsl(39, 100%, 56%) 2px, transparent 2px) 100% 100%;
+    linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
+    linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 100%;
 
   background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-size: 10px 10px;
+  border-radius: 5px;
+}
+
+#verbal{
+    background: hsl(166, 100%, 37%, .05);
+}
+
+#verbal .title {
+    color: hsl(166, 100%, 37%);
+}
+
+#summary-verbal-border{
+  position: absolute; 
+  width: 300px;
+  height: 52px;
+  background:
+    linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
+    linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 100%;
+
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  border-radius: 5px;
+}
+
+#visual {
+    background: hsl(234, 85%, 45%, .05);
+}
+
+#visual .title{
+    color: hsl(234, 85%, 45%);
+}
+
+#summary-visual-border{
+    position: absolute; 
+    width: 300px;
+    height: 52px;
+    background:
+      linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
+      linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
+      linear-gradient(to left, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 0,
+      linear-gradient(to left, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 100%,
+      linear-gradient(to bottom, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
+      linear-gradient(to bottom, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 0,
+      linear-gradient(to top, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
+      linear-gradient(to top, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 100%;
+  
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    border-radius: 5px;
+  }
+
+.btn {
+    background-color: hsl(224, 30%, 27%);
+    width: 300px;
+    height: 52px;
+    border-radius: 999px;
+    margin: 10px 0;
+
+    color: hsl(0, 0%, 100%);
+
+    font: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    font-variation-settings: "wght" 500;
 }
 /*https://stackoverflow.com/questions/75607228/how-can-you-apply-a-border-to-only-corners-of-a-container-in-css*/
 /*https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders*/
+
+@media only screen and (min-width: 768px){
+
+.container{
+    width: 700px;
+    height: 450px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.results{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 375px;
+    border-radius: 30px;
+}
+
+
+.results-overall{
+    width: 250px;
+}
+
+.Summary{
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px hsl(221, 100%, 96%);
+    padding: 30px;
+}
+
+footer {
+    margin: 10px;
+}
+}
