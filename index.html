@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="data.json" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Results summary component</title>
@@ -38,10 +40,10 @@
       <div id="summary-reaction-border" class="border-position"></div>
       <div class="summary-content">
         <div class="summary-content-title">
-        <img src="./assets/images/icon-reaction.svg" class="summary-icon" alt="red lightning icon"/>
-        <span class="title">Reaction</span>
+        <img src="" class="summary-icon" alt="red lightning icon" id="summary-icon-reaction"/>
+        <span class="title" id="title-reaction"></span>
         </div>
-        <span class="score"><span class="summary-score">80</span> / 100</span>
+        <span class="score"><span class="summary-score" id="reaction-score"></span> / 100</span>
       </div>
 
     </div>
@@ -50,10 +52,10 @@
       <div id="summary-memory-border" class="border-position"></div>
       <div class="summary-content">
         <div class="summary-content-title">
-          <img src="./assets/images/icon-memory.svg" class="summary-icon" alt="minimal brain icon"/>
-          <span class="title">Memory</span>
+          <img src="" class="summary-icon" alt="minimal brain icon" id="summary-icon-memory"/>
+          <span class="title" id="title-memory"></span>
         </div>
-        <span class="score"><span class="summary-score">92</span> / 100</span>
+        <span class="score"><span class="summary-score"  id="memory-score"></span> / 100</span>
       </div>
     </div>
     
@@ -61,10 +63,10 @@
       <div id="summary-verbal-border" class="border-position"></div>
       <div class="summary-content">
         <div class="summary-content-title">
-          <img src="./assets/images/icon-verbal.svg" class="summary-icon" alt="small chat box icon"/>
-          <span class="title">Verbal</span>
+          <img src="" class="summary-icon" alt="small chat box icon" id="summary-icon-verbal"/>
+          <span class="title" id="title-verbal"></span>
         </div>
-        <span class="score"><span class="summary-score">61</span> / 100</span>
+        <span class="score"><span class="summary-score" id="verbal-score"></span> / 100</span>
       </div>
 
       
@@ -78,11 +80,11 @@
 
         <div class="summary-content-title">
 
-          <img src="./assets/images/icon-visual.svg" class="summary-icon" alt="minimal eye icon"/>
-          <span class="title">Visual</span>
+          <img src="" class="summary-icon" alt="minimal eye icon" id="summary-icon-visual"/>
+          <span class="title" id="title-visual"></span>
 
         </div>
-       <span class="score"><span class="summary-score">72</span> / 100</span>
+       <span class="score"><span class="summary-score" id="visual-score"></span> / 100</span>
       </div>
 
       
