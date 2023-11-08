@@ -285,6 +285,10 @@ body{
     font-weight: 500;
     font-variation-settings: "wght" 500;
 }
+
+.hover{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)) ;
+}
 /*https://stackoverflow.com/questions/75607228/how-can-you-apply-a-border-to-only-corners-of-a-container-in-css*/
 /*https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders*/
 
