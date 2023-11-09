@@ -1,339 +1,349 @@
-@font-face{
-    font-family: 'HankenGrotesk';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
+@font-face {
+	font-family: 'HankenGrotesk';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
 }
 
-@font-face{
-    font-family: 'HankenGrotesk';
-    font-style: normal;
-    font-weight: 800;
-    src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
-}
-@font-face{
-    font-family: 'HankenGrotesk';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
+@font-face {
+	font-family: 'HankenGrotesk';
+	font-style: normal;
+	font-weight: 800;
+	src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
 }
 
-@font-face{
-    font-family: 'HankenGroteskVF';
-    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 1000;
-    font-stretch: 75% 200%;
-    font-variation-settings: 'wdth' 100, 'wght' 400;
+@font-face {
+	font-family: 'HankenGrotesk';
+	font-style: normal;
+	font-weight: 500;
+	src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('truetype');
 }
 
-body{
-    font-family: HankenGrotesk, sans-serif;
+@font-face {
+	font-family: 'HankenGroteskVF';
+	src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 1000;
+	font-stretch: 75% 200%;
+	font-variation-settings: 'wdth' 100, 'wght' 400;
 }
 
-@supports (font-variation-settings: normal){
-    body{
-         font-family: HankenGroteskVF, sans-serif;
-    }
+body {
+	font-family: HankenGrotesk, sans-serif;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@supports (font-variation-settings: normal) {
+	body {
+		font-family: HankenGroteskVF, sans-serif;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
 
 /* mobile first */
-body{
-    margin: 0;
+body {
+	margin: 0;
 }
 
 .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container{
-    width: 335px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.results{
-    text-align: center;
-    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)) ;
-    border-radius: 0px 0 30px 30px;
-    padding: 20px;
-    color: hsl(0, 0%, 100%);
-    width: 100%;
+.container {
+	width: 335px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: auto;
+}
+
+.results {
+	text-align: center;
+	background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+	border-radius: 0px 0 30px 30px;
+	padding: 20px;
+	color: hsl(0, 0%, 100%);
+	width: 100%;
 
 }
 
-.results-your{
-    margin: 0 0 15px 0;
-    color: hsl(0, 0%, 100%, .5);
-    font-size: 18px;
+.results-your {
+	margin: 0 0 15px 0;
+	color: hsl(0, 0%, 100%, .5);
+	font-size: 18px;
 }
 
 .results p {
-    color: hsl(241, 100%, 89%)   ;
-    margin: 0;
+	color: hsl(241, 100%, 89%);
+	margin: 0;
 }
 
-.results-circle{
+.results-circle {
 
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    border-radius: 50%;
-    margin: 10px auto;
+	width: 150px;
+	height: 150px;
+	background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+	border-radius: 50%;
+	margin: 10px auto;
 }
 
 
+.results-score {
+	font-size: 60px;
+	font-weight: 800;
+	font-variation-settings: "wght" 800;
+	margin: 0;
 
-.results-score{
-    font-size: 60px;
-    font-weight: 800;
-    font-variation-settings: "wght" 800;
-    margin: 0;
-    
 }
+
 .results-total-score {
-    color: hsl(241, 100%, 89%, .5);
-    font-weight: 700;
-    font-variation-settings: "wght" 700;
+	color: hsl(241, 100%, 89%, .5);
+	font-weight: 700;
+	font-variation-settings: "wght" 700;
 }
 
-.results-overall{
-    width: 280px;
-    margin: 0 auto;
+.results-overall {
+	width: 280px;
+	margin: 0 auto;
 }
 
 
-.results-rating{
-    margin: 10px 0;
+.results-rating {
+	margin: 10px 0;
 }
 
 .results-overall p {
-    margin: 10px 0;
+	margin: 10px 0;
 }
-.Summary{
-    width: 300px;
+
+.summary {
+	width: 300px;
 }
-.summary-rect{
-  position: relative;
-  border-radius: 5px;
-  max-width: 300px;
-  margin: 15px 0;
+
+.summary-rect {
+	position: relative;
+	border-radius: 5px;
+	max-width: 300px;
+	margin: 15px 0;
 }
 
 .summary-content {
-    padding: 16px 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	padding: 16px 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.summary-content-title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100px;
-    
-}
+.summary-content-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100px;
 
+}
 
 
 .summary-icon {
-  height: 24;
-  width: 24;
+	height: 24px;
+	width: 24px;
 }
 
 .title {
-    font-size: 16px;
-    font-weight: bold;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .score {
-    color: hsl(224, 30%, 27%, .55);
-    font-weight: 700;
-    font-variation-settings: "wght" 700;
+	color: hsl(224, 30%, 27%, .55);
+	font-weight: 700;
+	font-variation-settings: "wght" 700;
 }
 
-.summary-score{
-    font-weight: 600;
-    font-variation-settings: "wght" 800;
-    color: hsl(224, 30%, 27%);
+.summary-score {
+	font-weight: 600;
+	font-variation-settings: "wght" 800;
+	color: hsl(224, 30%, 27%);
 }
 
-.border-position{
-    position: absolute; 
-    width: 300px;
-    height: 52px;
+.border-position {
+	position: absolute;
+	width: 300px;
+	height: 52px;
 }
 
-#reaction{
-    background: hsla(0, 100%, 67%, 0.05);
+#reaction {
+	background: hsla(0, 100%, 67%, 0.05);
 }
 
 #reaction .title {
-    color: #ff7777;
+	color: #ff7777;
 }
 
 
+#summary-reaction-border {
 
-#summary-reaction-border{
+	background:
+		linear-gradient(to right, hsla(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to right, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to left, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to left, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%,
+		linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%;
 
-    background:
-      linear-gradient(to right, hsla(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
-      linear-gradient(to right, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
-      linear-gradient(to left, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
-      linear-gradient(to left, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%,
-      linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 0,
-      linear-gradient(to bottom, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 0,
-      linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 0 100%,
-      linear-gradient(to top, hsl(0, 100%, 67%, .25) 2px, transparent 2px) 100% 100%;
-    
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    border-radius: 5px;
-  }
-
-#memory{
-    background: hsla(39, 100%, 56%, 0.05);
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	border-radius: 5px;
 }
+
+#memory {
+	background: hsla(39, 100%, 56%, 0.05);
+}
+
 #memory .title {
-    color: hsl(39, 100%, 56%);
-}
-#summary-memory-border{
-
-  background:
-    linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
-    linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
-    linear-gradient(to left, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 0,
-    linear-gradient(to left, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 100%,
-    linear-gradient(to bottom, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
-    linear-gradient(to bottom, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 0,
-    linear-gradient(to top, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
-    linear-gradient(to top, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 100%;
-
-  background-repeat: no-repeat;
-  background-size: 10px 10px;
-  border-radius: 5px;
+	color: hsl(39, 100%, 56%);
 }
 
-#verbal{
-    background: hsl(166, 100%, 37%, .05);
+#summary-memory-border {
+
+	background:
+		linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to right, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to left, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to left, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 100%,
+		linear-gradient(to bottom, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to bottom, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to top, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to top, hsl(39, 100%, 56%, .25) 2px, transparent 2px) 100% 100%;
+
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	border-radius: 5px;
+}
+
+#verbal {
+	background: hsl(166, 100%, 37%, .05);
 }
 
 #verbal .title {
-    color: hsl(166, 100%, 37%);
+	color: hsl(166, 100%, 37%);
 }
 
-#summary-verbal-border{
+#summary-verbal-border {
 
-  background:
-    linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
-    linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
-    linear-gradient(to left, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 0,
-    linear-gradient(to left, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 100%,
-    linear-gradient(to bottom, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
-    linear-gradient(to bottom, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 0,
-    linear-gradient(to top, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
-    linear-gradient(to top, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 100%;
+	background:
+		linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to right, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to left, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to left, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 100%,
+		linear-gradient(to bottom, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to bottom, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to top, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to top, hsl(166, 100%, 37%, .25) 2px, transparent 2px) 100% 100%;
 
-  background-repeat: no-repeat;
-  background-size: 10px 10px;
-  border-radius: 5px;
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	border-radius: 5px;
 }
 
 #visual {
-    background: hsl(234, 85%, 45%, .05);
+	background: hsl(234, 85%, 45%, .05);
 }
 
-#visual .title{
-    color: hsl(234, 85%, 45%);
+#visual .title {
+	color: hsl(234, 85%, 45%);
 }
 
-#summary-visual-border{
+#summary-visual-border {
 
-    background:
-      linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
-      linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
-      linear-gradient(to left, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 0,
-      linear-gradient(to left, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 100%,
-      linear-gradient(to bottom, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
-      linear-gradient(to bottom, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 0,
-      linear-gradient(to top, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
-      linear-gradient(to top, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 100%;
-  
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    border-radius: 5px;
-  }
+	background:
+		linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to right, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to left, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to left, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 100%,
+		linear-gradient(to bottom, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 0,
+		linear-gradient(to bottom, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 0,
+		linear-gradient(to top, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 0 100%,
+		linear-gradient(to top, hsl(234, 85%, 45%, .25) 2px, transparent 2px) 100% 100%;
+
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	border-radius: 5px;
+}
 
 .btn {
-    background-color: hsl(224, 30%, 27%);
-    width: 300px;
-    height: 52px;
-    border-radius: 999px;
-    margin: 10px 0;
+	background-color: hsl(224, 30%, 27%);
+	width: 300px;
+	height: 52px;
+	border-radius: 999px;
+	margin: 10px 0;
+	border: none;
+	color: hsl(0, 0%, 100%);
 
-    color: hsl(0, 0%, 100%);
-
-    font: inherit;
-    font-size: 18px;
-    font-weight: 500;
-    font-variation-settings: "wght" 500;
+	font: inherit;
+	font-size: 18px;
+	font-weight: 500;
+	font-variation-settings: "wght" 500;
 }
 
-.hover{
-    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)) ;
+.hover {
+	background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
-/*https://stackoverflow.com/questions/75607228/how-can-you-apply-a-border-to-only-corners-of-a-container-in-css*/
-/*https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders*/
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
 
-    html,body{
-        width: 100%;
-        height: 100%;
-    } 
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+	}
 
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .container{
-        width: 700px;
-        height: 450px;
-        flex-direction: row;
-        justify-content: center;
-    }
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 
-    .results{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 270px;
-        height: 410px;
-        border-radius: 30px;
-    }
+	.container {
+		width: 700px;
+		height: 450px;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.results {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 270px;
+		height: 410px;
+		border-radius: 30px;
+	}
 
 
-    .results-overall{
-        width: 250px;
-    }
+	.results-overall {
+		width: 250px;
+	}
 
-    .Summary{
-        border-radius: 30px;
-        box-shadow: 10px 20px 40px hsl(221, 100%, 96%); 
-        padding: 30px;
-    }
+	.Summary {
+		border-radius: 30px;
+		box-shadow: 10px 20px 40px hsl(221, 100%, 96%);
+		padding: 30px;
+	}
 
-    footer {
-        margin: 10px;
-    }
+	footer {
+		margin: 10px;
+	}
 }

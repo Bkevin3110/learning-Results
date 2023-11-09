@@ -1,105 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="data.json" type="text/javascript"></script>
-  <script src="script.js" type="text/javascript"></script>
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<main class="container">
-  
-  <div class="results">
-
-    <div class="results-your">Your Result</div>
-
-    <div class="results-circle flex">
-      <div class="results-circle-score">
-      <span class="results-score">76</span>
-      <p><span class="results-total-score">of 100</span></p>
-      </div>
-    </div>
-
-    <div class="results-overall">
-
-      <h2 class="results-rating">Great</h2>
-      <p>You scored higher than 65% of the people who have taken these tests.</p>
-
-    </div>
-  </div>
-  <div class="Summary">
-    <div><h3>Summary</h2></div>
-    
-
-    <div class="summary-rect" id="reaction">
-      <div id="summary-reaction-border" class="border-position"></div>
-      <div class="summary-content">
-        <div class="summary-content-title">
-        <img src="" class="summary-icon" alt="red lightning icon" id="summary-icon-reaction"/>
-        <span class="title" id="title-reaction"></span>
-        </div>
-        <span class="score"><span class="summary-score" id="reaction-score"></span> / 100</span>
-      </div>
-
-    </div>
-
-    <div class="summary-rect" id="memory">
-      <div id="summary-memory-border" class="border-position"></div>
-      <div class="summary-content">
-        <div class="summary-content-title">
-          <img src="" class="summary-icon" alt="minimal brain icon" id="summary-icon-memory"/>
-          <span class="title" id="title-memory"></span>
-        </div>
-        <span class="score"><span class="summary-score"  id="memory-score"></span> / 100</span>
-      </div>
-    </div>
-    
-    <div class="summary-rect" id="verbal">
-      <div id="summary-verbal-border" class="border-position"></div>
-      <div class="summary-content">
-        <div class="summary-content-title">
-          <img src="" class="summary-icon" alt="small chat box icon" id="summary-icon-verbal"/>
-          <span class="title" id="title-verbal"></span>
-        </div>
-        <span class="score"><span class="summary-score" id="verbal-score"></span> / 100</span>
-      </div>
-
-      
-
-    </div>
-
-    <div class="summary-rect" id="visual">
-      <div id="summary-visual-border" class="border-position"></div>
-    
-      <div class="summary-content">
-
-        <div class="summary-content-title">
-
-          <img src="" class="summary-icon" alt="minimal eye icon" id="summary-icon-visual"/>
-          <span class="title" id="title-visual"></span>
-
-        </div>
-       <span class="score"><span class="summary-score" id="visual-score"></span> / 100</span>
-      </div>
-
-      
-    </div>  
-
-
-    <button class="btn" id="btn-continue" >Continue</button>  
-  </div>
-</main>
-<footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/Bkevin3110" target="_blank">Bkevin3110</a>.
-  </div>
-</footer>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- displays site properly based on user's device -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="data.json"></script>
+      <script src="script.js"></script>
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+      <title>Frontend Mentor | Results summary component</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <main class="container">
+         <div class="results">
+            <h1>
+               <div class="results-your">Your Result</div>
+            </h1>
+            <div class="results-circle flex">
+               <div class="results-circle-score">
+                  <span class="results-score">76</span>
+                  <p><span class="results-total-score">of 100</span></p>
+               </div>
+            </div>
+            <div class="results-overall">
+               <h2 class="results-rating">Great</h2>
+               <p>You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+         </div>
+         <div class="summary">
+            <div>
+               <h3>Summary</h3>
+            </div>
+            <div class="summary-rect" id="reaction">
+               <div id="summary-reaction-border" class="border-position"></div>
+               <div class="summary-content">
+                  <div class="summary-content-title">
+                     <img src="" class="summary-icon" alt="red lightning icon" id="summary-icon-reaction"/>
+                     <span class="title" id="title-reaction"></span>
+                  </div>
+                  <span class="score"><span class="summary-score" id="reaction-score"></span> / 100</span>
+               </div>
+            </div>
+            <div class="summary-rect" id="memory">
+               <div id="summary-memory-border" class="border-position"></div>
+               <div class="summary-content">
+                  <div class="summary-content-title">
+                     <img src="" class="summary-icon" alt="minimal brain icon" id="summary-icon-memory"/>
+                     <span class="title" id="title-memory"></span>
+                  </div>
+                  <span class="score"><span class="summary-score"  id="memory-score"></span> / 100</span>
+               </div>
+            </div>
+            <div class="summary-rect" id="verbal">
+               <div id="summary-verbal-border" class="border-position"></div>
+               <div class="summary-content">
+                  <div class="summary-content-title">
+                     <img src="" class="summary-icon" alt="small chat box icon" id="summary-icon-verbal"/>
+                     <span class="title" id="title-verbal"></span>
+                  </div>
+                  <span class="score"><span class="summary-score" id="verbal-score"></span> / 100</span>
+               </div>
+            </div>
+            <div class="summary-rect" id="visual">
+               <div id="summary-visual-border" class="border-position"></div>
+               <div class="summary-content">
+                  <div class="summary-content-title">
+                     <img src="" class="summary-icon" alt="minimal eye icon" id="summary-icon-visual"/>
+                     <span class="title" id="title-visual"></span>
+                  </div>
+                  <span class="score"><span class="summary-score" id="visual-score"></span> / 100</span>
+               </div>
+            </div>
+            <button class="btn" id="btn-continue" >Continue</button>  
+         </div>
+      </main>
+      <footer>
+         <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://www.frontendmentor.io/profile/Bkevin3110" target="_blank">Bkevin3110</a>.
+         </div>
+      </footer>
+   </body>
 </html>
